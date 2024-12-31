@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>観光地サイト</title>
+    
+    <!-- Bootstrap CSS via CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="supott.css">
+</head>
+<style></style>
+<body>
+
+    <!-- ナビゲーションバー -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <!-- サブコンポーネント -->
+      <!-- ブランド -->
+      <a class="navbar-brand" href="trip_site.html">観光地サイト</a>
+      <!-- 切り替えボタン -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- ナビゲーション -->
+      <div class="collapse navbar-collapse" id="navbar-content">
+        <!-- ナビゲーションメニュー -->
+        <!-- 左側メニュー：トップページの各コンテンツへのリンク -->
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="trip_site.html">ホーム<span class="visually-hidden"></span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="supott.html">観光スポット</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="rank.html">観光者国別受け入れランキング</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="logged-in-page.html">ログイン</a>
+          </li>
+          <!-- <li class="nav-item ">
+            <a class="nav-link" href="rei.html">表<span class="visually-hidden"></span></a>
+          </li> -->
+        </ul>
+        <!-- 右側メニュー：お問い合わせページへのリンク -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="toi.html" class="nav-link btn btn-info text-dark">お問い合わせ</a>
+          </li>
+        </ul>
+        <!-- /ナビゲーションメニュー -->
+      </div>
+      <!-- /サブコンポーネント -->
+    </div>
+  </nav>
+  <!-- /ナビゲーションバー -->
+
+    <!-- ヘッダーセクション -->
+<div class="title">観光スポット</div>
+
+<p>キーワードから探す</p>
+<form id="search-form">
+  <input type="text" id="search-input" placeholder="検索キーワードを入力">
+  <button type="submit" id="search-button">検索</button>
+</form>
+<!-- <input type="text" id="countryInput">
+<button onclick="searchCountry()">検索</button> -->
+
+<div class="map">地図から探す</div>
+
+<!-- 地図コンテナ -->
+<div id="map-container">
+  <!-- 画像とテキストを含むコンテンツ -->
+  <div class="content">
+    <img src="img/World_Map.png" alt="画像" class="img-fluid" id="imageToZoom">
+    <button class="World_Map_btn" id="map-button-af">アフリカ州</button>
+    <button class="World_Map_btn" id="map-button-eu">ヨーロッパ州</button>
+    <button class="World_Map_btn" id="map-button-ap">アジア州</button>
+    <button class="World_Map_btn" id="map-button-oc">オセアニア州</button>
+    <button class="World_Map_btn" id="map-button-na">北アメリカ州</button>
+    <button class="World_Map_btn" id="map-button-sa">南アメリカ州</button>
+    <button id="newElement" class="hidden">戻る</button>
+  </div>
+  <!-- 地図上のボタン -->
+
+  <!-- 他のhiddenなdiv -->
+  <div class="hidden" id="list-group-af">
+    <h6>国から観光スポットを探す</h6>
+      <dl class="list">
+        <dt>
+          <a href="#" class="highlight-link">南アフリカ</a>
+          <a href="#" class="highlight-link">エジプト</a>
+          <a href="#" class="highlight-link">モロッコ</a>
+        </dt>
+        <dd style="text-align: right; margin-right: 10px;">
+          <a href="#">その他</a>
+        </dd>
+      </dl>
+  </div>
+  <div class="hidden" id="list-group-eu">
+    <h6>国から観光スポットを探す</h6>
+      <dl class="list">
+        <dt>
+          <a href="https://www.club-t.com/ct/kanko/guide/abroad/info/a_042/">イギリス</a>
+          <a href="#">フランス</a>
+          <a href="/spot/colo.html">イタリア</a>
+          <a href="#">ドイツ</a>
+          <a href="#">スイス</a>
+          <a href="#">スペイン</a>
+          <a href="#">フィンランド</a>
+          <a href="#">ベルギー</a>
+          <a href="#">ギリシャ</a>
+          <a href="#">ポルトガル</a>
+          <a href="#">クロアチア</a>
+        </dt>
+        <dd style="text-align: right; margin-right: 10px;">
+          <a href="#">その他</a>
+        </dd>
+      </dl>
+  </div>
+  <div class="hidden" id="list-group-ap">
+    <h6>国から観光スポットを探す</h6>
+      <dl class="list">
+        <dt>
+          <a href="https://kanko.travel.rakuten.co.jp/">日本</a>
+          <a href="https://travel.rakuten.co.jp/mytrip/ranking/sightseeing-korea">韓国</a>
+          <a href="/spot/banri.html">中国</a>
+          <a href="https://www.knt.co.jp/travelguide/kaigai/022/">台湾</a>
+          <a href="https://travel.rakuten.co.jp/mytrip/ranking/sightseeing-hongkong">香港</a>
+          <a href="https://travel.rakuten.co.jp/mytrip/ranking/sightseeing-macau">マカオ</a>
+          <a href="https://travel.rakuten.co.jp/mytrip/ranking/sightseeing-thailand">タイ</a>
+          <a href="https://travel.rakuten.co.jp/mytrip/ranking/sightseeing-vietnam">ベトナム</a>
+          <a href="https://www.kansai-airport.or.jp/flyfromkansai/destination/malaysia_2023/#section01">マレーシア</a>
+          <a href="https://www.kansai-airport.or.jp/flyfromkansai/destination/singapore_2023/">シンガポール</a>
+        </dt>
+        <dd style="text-align: right; margin-right: 10px;">
+          <a href="#">その他</a>
+        </dd>
+      </dl>
+  </div>
+  <div class="hidden" id="list-group-oc">
+    <h6>国から観光スポットを探す</h6>
+      <dl class="list">
+        <dt>
+          <a href="#">オーストラリア</a>
+          <a href="#">ニュージーランド</a>
+          <a href="#">フィジー</a>
+        </dt>
+        <dd style="text-align: right; margin-right: 10px;">
+          <a href="#">その他</a>
+        </dd>
+      </dl>
+  </div>
+  <div class="hidden" id="list-group-na">
+    <h6>国から観光スポットを探す</h6>
+      <dl class="list">
+        <dt>
+          <a href="#">アメリカ</a>
+          <a href="#">カナダ</a>
+          <a href="#">ハワイ</a>
+        </dt>
+        <dd style="text-align: right; margin-right: 10px;">
+          <a href="#">その他</a>
+        </dd>
+      </dl>
+  </div>
+  <div class="hidden" id="list-group-sa">
+    <h6>国から観光スポットを探す</h6>
+      <dl class="list">
+        <dt>
+          <a href="#">ペルー</a>
+          <a href="#">ブラジル</a>
+          <a href="#">アルゼンチン</a>
+        </dt>
+        <dd style="text-align: right; margin-right: 10px;">
+          <a href="#">その他</a>
+          <a href="#"></a>
+        </dd>
+      </dl>
+  </div>
+</div>
+
+    <!-- フッターセクション -->
+    <footer style="margin-top: 20px;" class="bg-dark text-light text-center py-3">
+        &copy; 2023 観光地サイト
+    </footer>
+
+  <!-- Bootstrap CSS via CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Bootstrap JavaScript via CDN -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+
+<script src="supott.js"></script>
+
+</body>
+</html>

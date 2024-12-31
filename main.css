@@ -1,0 +1,97 @@
+.carousel-inner img {
+    height: 500px; /* 適切な高さに調整 */
+    width: auto; /* 幅は自動調整 */
+    margin: 0 auto; /* 左右のマージンを自動で調整して中央に配置 */
+    display: block; /* ブロック要素として表示 */
+}
+
+.jumbotron{
+    background-color:rgb(168, 157, 157)
+}
+
+.top{
+    margin-top:-50px;
+}
+
+main{
+    margin-top:-150px
+}
+
+.han{
+    position:relative;
+    z-index:1
+}
+
+.ko{
+    z-index:0
+}
+
+.cpn{
+    font-family: sans-serif;
+    font-size: 30px;
+}
+.syo{
+    font-size: 20px;
+}
+#people{
+    font-size:30px;
+}
+#nom{
+    background-color: rgb(230, 149, 149);
+}
+#nom_dt{
+    animation-name: move;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count:initial;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+#img_4{
+    margin-top: -8px;
+    z-index:-1;
+}
+#gurahu{
+    margin-top: -900px;
+    background-color: white;
+    opacity:1.0
+}
+#window{
+    color:white;
+}
+#bg{
+    background-image: url(./img/img4.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.img-fluid{
+    max-width: 100%; /* 最大幅を100%に設定 */
+    max-height: 320px; /* 最大高さを指定 */
+}
+table{
+    text-align: center;
+    width: 91px;
+    margin-left: 20%;
+}
+table td{
+    padding:0;
+    margin: 0;
+}
+.charset{
+    color: #cccccc;
+}
+input{
+    display: inline;
+}
+@keyframes move {
+    0%{
+        opacity:0%;
+    }
+    50%{
+        opacity:50%;
+    }
+    100%{
+        opacity:100%;
+    }
+}

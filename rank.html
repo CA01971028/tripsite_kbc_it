@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>観光地サイト</title>
+    
+    <!-- Bootstrap CSS via CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <style>
+      a {
+          text-decoration: none;
+      }
+  </style>
+</head>
+<body>
+
+    <!-- ナビゲーションバー -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <!-- サブコンポーネント -->
+      <!-- ブランド -->
+      <a class="navbar-brand" href="trip_site.html">観光地サイト</a>
+      <!-- 切り替えボタン -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- ナビゲーション -->
+      <div class="collapse navbar-collapse" id="navbar-content">
+        <!-- ナビゲーションメニュー -->
+        <!-- 左側メニュー：トップページの各コンテンツへのリンク -->
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="trip_site.html">ホーム<span class="visually-hidden"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="supott.html">観光スポット</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="rank.html">観光者国別受け入れランキング</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="logged-in-page.html">ログイン</a>
+          </li>
+        </ul>
+        <!-- 右側メニュー：お問い合わせページへのリンク -->
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a href="toi.html" class="nav-link btn btn-info text-dark">お問い合わせ</a>
+          </li>
+        </ul>
+        <!-- /ナビゲーションメニュー -->
+      </div>
+      <!-- /サブコンポーネント -->
+    </div>
+  </nav>
+  <!-- /ナビゲーションバー -->
+  <div id="bg">
+    <div class="h4 text-center charset">トップ３の観光者受け入れ国をご紹介！！</div>
+          <div class="h4 text-center ">No.1</div>
+          <a href="https://www.skygate.co.jp/sa_city/oversea/us"><div class="h4 text-center ">米国</div></a>
+          <div class="h4 text-center">No.2</div>
+          <a href="https://www.skygate.co.jp/sa_city/oversea/vn"><div class="h4 text-center">ベトナム</div></a>
+          <div class="h4 text-center">No.3</div>
+          <a href="https://www.knt.co.jp/travelguide/kaigai/009/"><div class="h4 text-center">シンガポール</div></a>
+        
+              <div class="text-center h4 charset">～国別観光者受け入れ数の2019年から2023年の増減～</div>
+              <div class="text-center">
+                <img src="img/people.png" alt="Image Description" class="img-fluid" >
+                <div class="h8 text-light">政府統計の総合窓口:参照</div>
+              </div>
+          <div id="season_bloc">
+            <div class="h1 charset text-center">国内観光地</div>
+            <a href="season.html">
+              <table>
+                <tr id="season">
+                    <td><img src="./img/spring.png" alt="春" height="300px"></td>
+                  <td><img src="./img/sumer.png" alt="夏" height="300px"></td>
+                  <td><img src="./img/fall.png" alt="秋" height="300px"></td>
+                  <td><img src="./img/winter.png" alt="冬" height="300px"></td>
+                </tr>
+              </table>
+            </a>
+            
+            
+          </div>
+        
+  
+    <!-- フッターセクション -->
+    <footer class="bg-dark text-light text-center py-3">
+        &copy; 2023 観光地サイト
+    </footer>
+  </div>
+    <!-- Bootstrap CSS via CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Bootstrap JavaScript via CDN -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

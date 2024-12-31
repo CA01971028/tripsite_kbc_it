@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>観光地サイト</title>
+    
+    <!-- Bootstrap CSS via CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+   <!-- ナビゲーションバー -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <!-- サブコンポーネント -->
+      <!-- ブランド -->
+      <a class="navbar-brand" href="trip_site.html">観光地サイト</a>
+      <!-- 切り替えボタン -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- ナビゲーション -->
+      <div class="collapse navbar-collapse" id="navbar-content">
+        <!-- ナビゲーションメニュー -->
+        <!-- 左側メニュー：トップページの各コンテンツへのリンク -->
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="trip_site.html">ホーム<span class="visually-hidden"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="supott.html">観光スポット</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="rank.html">観光者国別受け入れランキング</a>
+          </li>
+          <!-- <li class="nav-item ">
+            <a class="nav-link" href="rei.html">表<span class="visually-hidden"></span></a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="logged-in-page.html">ログイン</a>
+          </li>
+        </ul>
+        <!-- 右側メニュー：お問い合わせページへのリンク -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="toi.html" class="nav-link btn btn-info text-dark">お問い合わせ</a>
+          </li>
+        </ul>
+        <!-- /ナビゲーションメニュー -->
+      </div>
+      <!-- /サブコンポーネント -->
+    </div>
+  </nav>
+  <!-- /ナビゲーションバー -->
+
+    <!-- ヘッダーセクション -->
+    <header>
+        <div class="jumbotron">
+          <div>
+            <div class="han">
+              <p class="display-4 top">観光地へようこそ</p>
+              <p class="lead">美しい観光スポットを探索しましょう。</p>
+            </div>
+            <div class="ko">
+            <!-- メイン -->
+           <main>
+              <!-- メインビジュアル -->
+              <div class="py-4">
+                <div class="container">
+                  <!-- カルーセル外枠 -->
+                  <div id="main_visual" class="carousel slide" data-bs-ride="carousel">
+                    <!-- インジケーター -->
+                    <ol class="carousel-indicators">
+                      <li data-bs-target="#main_visual" data-bs-slide-to="0" class="active"></li>
+                      <li data-bs-target="#main_visual" data-bs-slide-to="1"></li>
+                      <li data-bs-target="#main_visual" data-bs-slide-to="2"></li>
+                    </ol>
+                    <!-- / インジケーター -->
+                    <!-- カルーセル内枠 -->
+                    <div class="carousel-inner">
+                      <!-- スライド01 -->
+                      <div class="carousel-item active">
+                        <img class="img-fluid" src="img/img1.png" alt="富士山">
+                        <div class="carousel-caption d-none d-md-block">
+                          <div class="cpn">
+                            <div class="display-4">JAPANESE</div>
+                            <p class="syo">日本の象徴、標高3,776mの富士山は絶景の山</p>
+                          </div>
+                          
+                        </div>
+                      </div>
+                      <!-- / スライド01 -->
+                      <!-- スライド02 -->
+                      <div class="carousel-item">
+                        <img class="img-fluid" src="img/img2.png" alt="コロッセオ">
+                        <div class="carousel-caption d-none d-md-block">
+                          <div class="cpn">
+                            <div class="display-4">Italy</div>
+                            <p class="syo">古代の円形闘技場、歴史的な闘争とエンターテインメントの場</p>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- / スライド02 -->
+                      <!-- スライド03 -->
+                      <div class="carousel-item">
+                        <img class="img-fluid" src="img/img3.png" alt="万里の長城">
+                        <div class="carousel-caption d-none d-md-block">
+                          <div class="cpn">
+                            <div class="display-4">China</div>
+                            <p class="syo">壮大な防御壁、歴史的な建造物、観光名所</p>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- / スライド03 -->
+                    </div>
+                    <!-- / カルーセル内枠 -->
+                    <!-- コントローラー -->
+                    <a class="carousel-control-prev" href="#main_visual" role="button" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">前に戻る</span>
+                    </a>
+                    <a class="carousel-control-next" href="#main_visual" role="button" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">次に進む</span>
+                    </a>
+                    <!-- / コントローラー -->
+                  </div>
+                  <!-- / カルーセル外枠 -->
+                </div>
+              </div>
+            </div>
+              <!-- / メインビジュアル -->
+                      <hr class="my-4">
+                      <p>あなたの冒険を始めましょう。</p>
+                      <a class="btn btn-primary btn-lg" href="#" role="button">もっと詳しく</a>
+                  </div>
+              </header>
+
+              <!-- コンテンツセクション -->
+              <section class="container">
+                  <h2>人気の観光スポット</h2>
+                  <div class="row">
+                      <div class="col-md-4">
+                          <div class="card">
+                              <img src="img/img1.png" class="card-img-top" alt="観光スポット1">
+                              <div class="card-body">
+                                  <h5 class="card-title">富士山</h5>
+                                  <p class="card-text">本州の東部に位置し、標高3,776Mを誇り、日本一高い山として知られています。</p>
+                                  <a href="spot/fuji.html" class="btn btn-primary">詳細を見る</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-4">
+                          <div class="card">
+                              <img src="img/img2.png" class="card-img-top" alt="観光スポット1" height="240px">
+                              <div class="card-body">
+                                  <h5 class="card-title">コロッセオ</h5>
+                                  <p class="card-text">古代ローマ帝国の象徴的な闘技場であり、紀元80年に建設されました。</p>
+                                  <a href="spot/colo.html" class="btn btn-primary">詳細を見る</a>
+                              </div>
+                          </div>
+                      </div><div class="col-md-4">
+                          <div class="card">
+                              <img src="img/img3.png" class="card-img-top" alt="観光スポット1" height="240px">
+                              <div class="card-body">
+                                  <h5 class="card-title">万里の長城</h5>
+                                  <p class="card-text">中国の歴史と文化の象徴的な遺産の一部でその総延長は約21,196㎞にも及びます。</p>
+                                  <a href="spot/banri.html" class="btn btn-primary">詳細を見る</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-4">
+                          <!-- 他の観光スポットカードを追加 -->
+                      </div>
+                      <div class="col-md-4">
+                          <!-- 他の観光スポットカードを追加 -->
+                      </div>
+                  </div>
+                </div>
+              </section>
+          </main>
+
+    <!-- フッターセクション -->
+    <footer class="bg-dark text-light text-center py-3">
+        &copy; 2023 観光地サイト
+    </footer>
+
+    <!-- Bootstrap CSS via CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Bootstrap JavaScript via CDN -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>

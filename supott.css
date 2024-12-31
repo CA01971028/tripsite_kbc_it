@@ -1,0 +1,206 @@
+.title {
+  text-align: center;/* テキストの位置 */
+  font-size: 30px;
+  font-weight: bold;
+  color: #364e96;
+  border: solid 3px #364e96;
+  padding: 0.5em 2%; /* 左右のパディングをパーセンテージで設定 */
+  border-radius: 0.5em;
+  margin: 5px 0;
+  /* display: inline-block; インラインブロック要素として表示 */
+  white-space: nowrap; /* テキストの改行を防ぐ */
+  width: auto; /* 幅を自動調整 */
+}
+
+.map {
+  font-size: 1.5em;/* フォントサイズ */
+  font-weight: bold;/* フォント太さ */
+  padding: 1em 0;
+  margin: 0.5em 0;
+  border-top: 3px solid #3f9613;/* 上の線 */
+  border-bottom: 3px solid #409614;/* 下の線 */
+  color: #409614;/* フォント色 */
+  text-align: center;/* テキストの位置 */
+}
+
+/* 地図コンテナのスタイリング */
+#map-container {
+  position: relative;
+  overflow: hidden;
+  width: auto;
+  max-width: 1141px;
+  height: auto; /* 適切な高さに設定してください */
+  max-height: 661px;
+  border: 1px solid #000; /* 枠線のスタイルと色を指定 */
+  background-color: #ccffff; /* 地図の背景色など */
+  margin: 0 auto; /* 左右のマージンを自動で設定して中央寄せ */
+  text-align: center;
+}
+.hidden {
+  display: none;
+}  
+/* 画像とテキストを含むコンテンツのスタイリング */
+.content img {
+  overflow: hidden;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+}
+.img-fluid {
+  filter: sepia(100%);
+}
+#imageToZoom {
+  transition: transform 0.3s ease; /* ズーム時のアニメーションを設定 */
+  /* cursor: zoom-in; ズームカーソルを設定 */
+}
+
+/* 地図上のボタンのスタイリング */
+.World_Map_btn {
+  position: absolute;
+  /* width: 100%;
+  max-width: 320px; */
+  height: 26px;
+  border-radius: 13px;
+  font-family: sans-serif;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  background-color: #6fa24a;
+  border: 0px solid #000;
+}
+.World_Map_btn:hover {
+  background-color: orangered;
+}
+#map-button-af {
+  bottom: 35%; /* ボタンの配置位置を調整 */
+  left: 7%; /* ボタンの配置位置を調整 */
+}
+
+#map-button-eu {
+  bottom: 60%; /* ボタンの配置位置を調整 */
+  left: 7%; /* ボタンの配置位置を調整 */
+}
+#map-button-ap {
+  bottom: 60%; /* ボタンの配置位置を調整 */
+  left: 40%; /* ボタンの配置位置を調整 */
+}
+#map-button-oc {
+  bottom: 25%; /* ボタンの配置位置を調整 */
+  left: 40%; /* ボタンの配置位置を調整 */
+}
+#map-button-na {
+  bottom: 60%; /* ボタンの配置位置を調整 */
+  left: 70%; /* ボタンの配置位置を調整 */
+}
+#map-button-sa {
+  bottom: 25%; /* ボタンの配置位置を調整 */
+  left: 75%; /* ボタンの配置位置を調整 */
+}
+
+#imageToZoom.zoomed {/*アフリカ州*/
+  transform-origin: 5% 75%; /* ズームの中心点を指定 (x座標,y座標) */
+  transform: scale(2.5); /* ズーム時の拡大率を設定 */
+  /* cursor: zoom-out; ズームアウトカーソルを設定 */
+}
+
+#imageToZoom.zoomed2 {/*ヨーロッパ州*/
+  transform-origin: 2% 25%; /* ズームの中心点を指定 (x座標,y座標) */
+  transform: scale(3); /* ズーム時の拡大率を設定 */
+  /* cursor: zoom-out; ズームアウトカーソルを設定 */
+}
+
+#imageToZoom.zoomed3 {/*アジア州*/
+  transform-origin: 45% 50%; /* ズームの中心点を指定 (x座標,y座標) */
+  transform: scale(2.5); /* ズーム時の拡大率を設定 */
+  /* cursor: zoom-out; ズームアウトカーソルを設定 */
+}
+
+#imageToZoom.zoomed4 {/*オセアニア州*/
+  transform-origin: 59% 90%; /* ズームの中心点を指定 (x座標,y座標) */
+  transform: scale(3); /* ズーム時の拡大率を設定 */
+  /* cursor: zoom-out; ズームアウトカーソルを設定 */
+}
+
+#imageToZoom.zoomed5 {/*北アメリカ州*/
+  transform-origin: 95% 28%; /* ズームの中心点を指定 (x座標,y座標) */
+  transform: scale(2); /* ズーム時の拡大率を設定 */
+  /* cursor: zoom-out; ズームアウトカーソルを設定 */
+}
+
+#imageToZoom.zoomed6 {/*南アメリカ州*/
+  transform-origin: 100% 100%; /* ズームの中心点を指定 (x座標,y座標) */
+  transform: scale(2.5); /* ズーム時の拡大率を設定 */
+  /* cursor: zoom-out; ズームアウトカーソルを設定 */
+}
+
+#newElement {
+  position: absolute;
+  height: 26px;
+  border-radius: 13px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 16px;
+  background-color: #ffcc00; /* 新しい要素の背景色を設定 */
+  color: #000000; /* 新しい要素のテキスト色を設定 */
+  padding: 0px;
+  width: 10%;
+  bottom: 0px; /* 下端からの距離 */
+  left: 0px; /* 左端からの距離 */
+  /* transform: translate(-50%, -50%); 画像の中央に配置するための位置調整 */
+  display: none; /* 初期状態は非表示 */
+}
+
+#newElement:hover {
+  background-color: blue;
+  color: whitesmoke;
+}
+
+
+#list-group-af,#list-group-eu,#list-group-ap,#list-group-oc,#list-group-na,#list-group-sa {
+  position: absolute;
+  z-index: 2;
+  width: 200px;
+  padding: 9px 9px 4px 9px;
+  border: 1px solid #C6AC6F;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  background-color: #FFFFFF;
+}
+#list-group-af,#list-group-eu,#list-group-ap,#list-group-oc,#list-group-na,#list-group-sa{
+  top: 0;
+}
+#list-group-af,#list-group-eu,#list-group-ap,#list-group-oc{
+  right: 0;
+}
+#list-group-na,#list-group-sa{
+  left: 0;
+}
+
+/* メディアクエリ（大きな画面用のスタイル） */
+@media (min-width: 768px) {
+  #list-group-af,#list-group-eu,#list-group-ap,#list-group-oc,#list-group-na,#list-group-sa {
+    position: absolute;
+    z-index: 2;
+    width: 370px;
+    padding: 9px 9px 4px 9px;
+    border: 1px solid #C6AC6F;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    background-color: #FFFFFF;
+  }
+}
+
+/* ハイライト用のクラス */
+.highlight-point {
+  position: absolute;
+  border-radius: 50%; /* 円形の形状に */
+  width: 20px;
+  height: 20px;
+  display: none; /* 初期状態は非表示 */  
+  background-color: yellow; /* 光る色を設定 */
+    /* ポインターの位置を調整 */
+    left: 100px; /* X座標 */
+    top: 150px; /* Y座標 */
+}
